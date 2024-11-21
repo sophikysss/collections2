@@ -1,4 +1,7 @@
 package org.example;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class Person {
     private int id;
@@ -6,9 +9,18 @@ public class Person {
     private String gender;
     private Departament departament;
     private double salary;
-    private String dateOfBirth;
+    private Date dateOfBirth;
 
-    public Person(int id, String name, String gender, Departament departament, double salary, String dateOfBirth)
+    public Person(int id, String name, String gender, Departament departament, double salary, Date dateOfBirth)
+    {
+        this.id=id;
+        this.name=name;
+        this.gender=gender;
+        this.departament=departament;
+        this.salary=salary;
+        this.dateOfBirth=dateOfBirth;
+    }
+    public Person()
     {
         this.id=id;
         this.name=name;
@@ -38,7 +50,7 @@ public class Person {
     {
         return salary;
     }
-    public String getDateOfBirth()
+    public Date getDateOfBirth()
     {
         return dateOfBirth;
     }
@@ -64,7 +76,7 @@ public class Person {
     {
         this.salary=salary;
     }
-    public void setDateOfBirth(String dateOfBirth)
+    public void setDateOfBirth(Date dateOfBirth)
     {
         this.dateOfBirth=dateOfBirth;
     }
