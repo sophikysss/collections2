@@ -16,11 +16,11 @@ public class PersonTest {
         calendar.set(1990, Calendar.JANUARY, 1);
         Date dateOfBirth = calendar.getTime();
 
-        Person person = new Person(1, "Иван", "М", department, 50000, dateOfBirth);
+        Person person = new Person(1, "Ivan", "M", department, 50000, dateOfBirth);
 
         assertEquals(1, person.getId());
-        assertEquals("Иван", person.getName());
-        assertEquals("М", person.getGender());
+        assertEquals("Ivan", person.getName());
+        assertEquals("M", person.getGender());
         assertEquals(department, person.getDepartament());
         assertEquals(50000, person.getSalary());
         assertEquals(dateOfBirth, person.getDateOfBirth());
@@ -43,8 +43,8 @@ public class PersonTest {
         Person person = new Person();
 
         person.setId(2);
-        person.setName("Анна");
-        person.setGender("Ж");
+        person.setName("Anna");
+        person.setGender("F");
         person.setDepartament(department);
         person.setSalary(60000);
         Calendar calendar = Calendar.getInstance();
@@ -52,8 +52,8 @@ public class PersonTest {
         person.setDateOfBirth(calendar.getTime());
 
         assertEquals(2, person.getId());
-        assertEquals("Анна", person.getName());
-        assertEquals("Ж", person.getGender());
+        assertEquals("Anna", person.getName());
+        assertEquals("F", person.getGender());
         assertEquals(department, person.getDepartament());
         assertEquals(60000, person.getSalary());
         assertEquals(calendar.getTime(), person.getDateOfBirth());
